@@ -19,6 +19,7 @@ const CLOUDINARY_CLOUD_NAME="dfvc6rywc";
     EXPENSE_EXCEL_DOWNLOAD:"/excel/download/expense",
     EMAIL_INCOME:"/email/income-excel",
     EMAIL_EXPENSE:"/email/expense-excel",
-
+    APPLY_FILTERS:"/filter",
+    DASHBOARD_DATA:"/dashboard",
     UPLOAD_IMAGE:`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`
 }
