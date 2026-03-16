@@ -3,7 +3,7 @@ import TransactionInfoCard from "./TransactionInfoCard";
 import moment from "moment";
 import { useState } from "react";
 
-const IncomeList=({transaction,onDelete,onEmail,onDownload})=>{
+const ExpenseList=({transaction,onDelete,onEmail,onDownload})=>{
     const [loadingDown,setLoadingDown]=useState(false);
     const [loadingEma,setLoadingEma]=useState(false);
 
@@ -34,12 +34,12 @@ const IncomeList=({transaction,onDelete,onEmail,onDownload})=>{
         <div className="card"> 
             <div className="flex items-center justify-between">
                 <h5 className="text-lg">
-                    Income Sources
+                    Expense Sources
                 </h5>
-                  {/* {transaction.length===0?(
+                {/* {transaction.length===0?(
                    " "
                 ):(
-                    <div className="flex items-center justify-end gap-2">
+                     <div className="flex items-center justify-end gap-2">
                         <button disabled={loadingEma} className="card-btn" onClick={handleEmail}>
                              {loadingEma?(
                                       <>
@@ -72,37 +72,34 @@ const IncomeList=({transaction,onDelete,onEmail,onDownload})=>{
                         </button>
                     </div>
                 )} */}
+                   
             </div>
 
-
-             {transaction.length===0?(
+                  {transaction.length===0?(
                     <div className="text-center m-15">
 
-                      <h4>No Incomes      </h4>
-
+                      <h4>No Expenses</h4>
                       </div>
                 ):(
-                     <div className="grid grid-cols-1 md:grid-cols-2">
-                {transaction?.map((income)=>(
+                    <div className="grid grid-cols-1 md:grid-cols-2">
+                    
+                    {transaction?.map((expense)=>(
                     <TransactionInfoCard 
-                        key={income.id}
-                        title={income.name}
-                        icon={income.icon}
-                        date={moment(income.date).format('Do MMM YYYY')}
-                        amount={income.amount}
-                        type="income"
-                        onDelete={()=>onDelete(income.id)}
+                        key={expense.id}
+                        title={expense.name}
+                        icon={expense.icon}
+                        date={moment(expense.date).format('Do MMM YYYY')}
+                        amount={expense.amount}
+                        type="expense"
+                        onDelete={()=>onDelete(expense.id)}
                       
                     />
                 ))}
+            
             </div>
                 )}
-                
-              
-
-          
         </div>
     )
 }
 
-export default IncomeList;
+export default ExpenseList;

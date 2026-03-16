@@ -114,7 +114,7 @@ const Login = () => {
                             }
                        
 
-                         <button disabled={isLoading} className={`btn-primary w-full py-3 text-lg font-medium flex item-center justify-center gap-2 ${isLoading?'opacity-60 cursor-not-allowed':''}`} type="submit">
+                         <button disabled={isLoading} className={`btn-primary w-full py-3 text-lg font-medium flex items-center justify-center gap-2 ${isLoading?'opacity-60 cursor-not-allowed':''}`} type="submit">
                            {isLoading ?(
                             <>
                             <LoaderCircle className="animate-spin w-5 h-5" />
@@ -128,7 +128,7 @@ const Login = () => {
 
 
                         <p className="text-sm text-slate-800 text-center mt-6">
-                           Do Not Have Account
+                           Do Not Have Account? 
                             <Link to="/signup" className="font-medium text-primary underline hover:text-primary-dark transition-colors">
                             SIGN IN
                             </Link>

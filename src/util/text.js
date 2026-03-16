@@ -1,5 +1,5 @@
-// export const BASE_URL="https://moneytracker-n1fe.onrender.com/api/v1.0";
-export const BASE_URL="http://localhost:8080/api/v1.0";
+export const BASE_URL="https://moneytracker-n1fe.onrender.com/api/v1.0";
+// export const BASE_URL="http://localhost:8080/api/v1.0";
 
 
 const CLOUDINARY_CLOUD_NAME="dfvc6rywc";
@@ -12,9 +12,12 @@ const CLOUDINARY_CLOUD_NAME="dfvc6rywc";
     ADD_CATEGORY:"/categories",
     UPDATE_CATEGORY:(categoryId)=>`/categories/${categoryId}`,
     GET_ALL_INCOMES:"/incomes",
+    GET_ALL_EXPENSES:"/expenses",
     CATEGORY_BY_TYPE:(type)=>`/categories/${type}`,
     ADD_INCOME:"/incomes",
+    ADD_EXPENSE:"/expenses",
     DELETE_INCOME:(incomeId)=>`/incomes/${incomeId}`,
+    DELETE_EXPENSE:(expenseId)=>`/expenses/${expenseId}`,
     INCOME_EXCEL_DOWNLOAD:"/excel/download/income",
     EXPENSE_EXCEL_DOWNLOAD:"/excel/download/expense",
     EMAIL_INCOME:"/email/income-excel",

@@ -1,4 +1,4 @@
-import { WalletCards } from "lucide-react";
+import { ArrowDownCircle, ArrowUpCircle, TrendingDown, TrendingUp, TrendingUpDown, WalletCards } from "lucide-react";
 import Dashboard from "../components/Dashboard";
 import InfoCard from "../components/InfoCard";
 import { useUser } from "../hooks/useUser";
@@ -27,12 +27,12 @@ const Home = () => {
            
             if(response.status===200){
                 setDashboardData(response.data);
-                 console.log(dashboardData.recent5Incomes);
+              
             }
 
         } catch (error) {
             console.log('Something went wrong while fetching dashboard data',error);
-            toast.error('Something Went Wrong!..');
+            toast.error('Something Went Wrong!..',error);
         }finally{
             setLoading(false);
         }
@@ -59,14 +59,14 @@ const Home = () => {
                             
                         />
                           <InfoCard
-                            icon={<WalletCards />}
+                            icon={<TrendingUp size={20} />}
                             label="Total Income"
                             value={addThousandsSeparator(dashboardData?.totalIncome || 0)}
                             color="bg-green-800"
                             
                         />
                           <InfoCard
-                            icon={<WalletCards />}
+                            icon={<TrendingDown size={20} />}
                             label="Total Expence"
                             value={addThousandsSeparator(dashboardData?.totalExpense || 0)}
                             color="bg-red-800"
@@ -74,11 +74,11 @@ const Home = () => {
                         />
 
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-2">
                         {/* Recent transactions */}
                         <RecentTransactions
                             transactions={dashboardData?.recentTransaction}
-                            OnMore={()=>navigate("/expense")}
+                            OnMore={()=>navigate("/alltransaction")}
                         />
                     
                         {/* finance overview */}

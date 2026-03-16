@@ -223,7 +223,7 @@ const Income = () => {
 
                 </div>
             </div>
-            </Dashboard>
+        </Dashboard>
     )
 }
 

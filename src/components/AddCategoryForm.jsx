@@ -73,7 +73,7 @@ const AddCategoryForm=({onAddCategory,initialCategoryData,isEditing})=>{
                 type="button"
                 onClick={handleSubmit}
                 disabled={loading}
-                className="add-btn add-btn-fill">
+                className="add-btn add-btn-fill-blue">
                      {loading ?(
                         <>
                            <LoaderCircle className="animate-spin w-5 h-5" />
