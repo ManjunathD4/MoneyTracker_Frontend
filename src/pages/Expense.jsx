@@ -5,7 +5,7 @@ import axiosConfig from "../util/axiosConfig";
 import { API_ENDPOINTS } from "../util/text";
 import ExpenseOverview from "../components/ExpenseOverview";
 import ExpenseList from "../components/ExpenseList";
-import AddExpenseForm from "../components/ADDExpenseForm";
+import AddExpenseForm from "../components/AddExpenseForm";
 import Modal from "../components/Modal";
 import DeleteAlert from "../components/DeleteAlert";
 import toast from "react-hot-toast";
