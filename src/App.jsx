@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import {Toaster} from "react-hot-toast";
 import Transaction from "./pages/Transaction";
+import Activation from "./pages/activation";
 
 
 const App = () =>{
@@ -26,6 +27,8 @@ const App = () =>{
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/alltransaction" element={<Transaction />} />
+                <Route path="/activate" element={<Activation />} />
+
 
             </Routes> 
         </BrowserRouter>
