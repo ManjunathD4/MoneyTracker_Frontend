@@ -1,6 +1,6 @@
 //export const BASE_URL="https://moneytracker-n1fe.onrender.com/api/v1.0";
-export const BASE_URL="http://localhost:8080/api/v1.0";
-//export const BASE_URL="http://172.232.109.234:8080/api/v1.0";
+//export const BASE_URL="http://localhost:8080/api/v1.0";
+export const BASE_URL="http://172.232.109.234:8080/api/v1.0";
 
 
 
