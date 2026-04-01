@@ -70,7 +70,13 @@ const Signup = () => {
                 toast.success("Profile Created Successfully");
                 navigate("/login");
             }
+           
        } catch (error2) {
+         if(error2.response.status===409){
+              
+                toast.error("Profile Already Registerd");
+                navigate("/login");
+            }
             console.error('Something went wrong',error2);
             setError(error2.message);
             
